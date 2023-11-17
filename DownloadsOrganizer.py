@@ -62,6 +62,8 @@ def file_organizer(files):
         # print(file)
         if not os.path.isfile(get_downloads_path() + "\\" + file) or file == "desktop.ini":
             continue
+        if file == os.path.basename(__file__):
+            continue
 
         directory = getDirectoryMatch(file)
         if directory != False:
